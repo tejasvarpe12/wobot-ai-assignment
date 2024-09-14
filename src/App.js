@@ -148,14 +148,14 @@ function App() {
           {currentCameras.map((camera) => (
             <tr key={camera.id}>
               <td><input type="checkbox" /></td>
-              <td>{camera.name}</td>
+              <td><span className='green-dot'></span>{camera.name}</td>
               <td>
-                <span className='health'></span>
-                {typeof camera.health === 'object' ? camera.health.device : camera.health || 'N/A'}
+                <span className='health'>
+                {typeof camera.health === 'object' ? camera.health.device : camera.health || 'N/A'}</span>
               </td>
               <td>{camera.location}</td>
               <td>{camera.recorder || 'N/A'}</td>
-              <td>{Array.isArray(camera.tasks) ? `${camera.tasks.length} Tasks` : 'N/A'}</td>
+              <td>{Array.isArray(camera.tasks) ? `${camera.tasks.length} Tasks` : camera.tasks || 'N/A'} Tasks</td>
               <td>
                 <button
                   className={`status-btn ${camera.status.toLowerCase()}`}
