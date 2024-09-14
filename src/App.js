@@ -87,7 +87,7 @@ function App() {
   };
 
   if (loading) {
-    return <p>Loading cameras...</p>;
+    return <p className='loader'>Loading...</p>;
   }
 
   return (

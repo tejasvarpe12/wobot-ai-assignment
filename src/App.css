@@ -16,6 +16,10 @@ body {
   border-radius: 10px;
 }
 
+.loader{
+  text-align: center;
+}
+
 h1 {
   text-align: center;
   color: #466eda;
